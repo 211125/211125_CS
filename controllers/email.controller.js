@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from "uuid";
 const email_password = async (req, res) => {
     const token = uuidv4();
     const email = req.body.email;
-    const url = `http://localhost:3001/New-Password?${token}&email=${email}`
+    const url = `http://angelito211125.hopto.org/New-Password?${token}&email=${email}`
     console.log(email)
     await transporter.sendMail({
         from: ' <211125@ids.upchiapas.edu.mx>', // sender address

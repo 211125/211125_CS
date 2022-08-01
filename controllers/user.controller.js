@@ -31,7 +31,7 @@ const user_create = async (req, res) => {
                 const token = jwt.sign({
                     to: email,
                 }, 'secret', { expiresIn: '30m' }, data.parsed.JWT_TOKEN_SECRET, { algorithm: 'HS256' })
-                const url = `http://localhost:3001/Confirmation?${token}&email=${email}`
+                const url = `http://angelito211125.hopto.org/Confirmation?${token}&email=${email}`
                 await transporter.sendMail({
                     from: ' <211125@ids.upchiapas.edu.mx>', // sender address
                     to: email, // list of receivers
